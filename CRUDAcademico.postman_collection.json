@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "a198afdc-baf0-45a7-8a17-ef6693c549b8",
+		"name": "CRUDAcademico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956970"
+	},
+	"item": [
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "PostCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tallerr\",\r\n    \"hour\": \"30 horas\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/add",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/list",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCourse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tecnologia\",\r\n    \"hour\": \"30 horas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/update/67a97100f59605d29d03dbca",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"update",
+								"67a97100f59605d29d03dbca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/delete/67a97100f59605d29d03dbca",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"delete",
+								"67a97100f59605d29d03dbca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "PostUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Carlos\",\r\n  \"surname\": \"González\",\r\n  \"username\": \"sssgonza\",\r\n  \"email\": \"carlosGonzalseaz@gmail.com\",\r\n  \"password\": \"Andre-2024!\",\r\n  \"role\": \"TEACHER_ROLE\",\r\n  \"course\": [\"67a9890dc2a978f7b8167654\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/addUser",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTk4OTcwYzJhOTc4ZjdiODE2NzY1NyIsInVzZXJuYW1lIjoic3NzZ29uemEiLCJuYW1lIjoiQ2FybG9zIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NDAyNywiZXhwIjoxNzM5MTc0ODI3fQ.NbspfvcwUXNpnGQnqS3zvet8EJwv7EjdrdCjS2qyVIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/list/67a974935b20c1cd4b857bca",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"list",
+								"67a974935b20c1cd4b857bca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userLogin\": \"sssgonza\",\r\n    \"password\": \"Andre-2024!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTk4OTcwYzJhOTc4ZjdiODE2NzY1NyIsInVzZXJuYW1lIjoic3NzZ29uemEiLCJuYW1lIjoiQ2FybG9zIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NDAyNywiZXhwIjoxNzM5MTc0ODI3fQ.NbspfvcwUXNpnGQnqS3zvet8EJwv7EjdrdCjS2qyVIQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Carlos\",\r\n  \"surname\": \"González\",\r\n  \"username\": \"carlitos12\",\r\n  \"email\": \"carlosGonzalez@gmail.com\",\r\n  \"password\": \"Andre-2024!\",\r\n  \"role\": \"TEACHER_ROLE\",\r\n  \"enrolledCourses\": [\"67a970f8f59605d29d03dbc7\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2636/updateU/67a974935b20c1cd4b857bca",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"updateU",
+								"67a974935b20c1cd4b857bca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YTk4OTcwYzJhOTc4ZjdiODE2NzY1NyIsInVzZXJuYW1lIjoic3NzZ29uemEiLCJuYW1lIjoiQ2FybG9zIiwicm9sZSI6IlRFQUNIRVJfUk9MRSIsImlhdCI6MTczOTE2NDAyNywiZXhwIjoxNzM5MTc0ODI3fQ.NbspfvcwUXNpnGQnqS3zvet8EJwv7EjdrdCjS2qyVIQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:2636/deleteU/67a974935b20c1cd4b857bca",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"deleteU",
+								"67a974935b20c1cd4b857bca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
